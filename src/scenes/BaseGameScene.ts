@@ -32,8 +32,8 @@ export abstract class BaseGameScene extends Phaser.Scene {
     this.overlayGfx = this.add.graphics();
 
     // trains
-    this.trainASprite = this.add.rectangle(0, 0, 36, 18, 0x4aa3ff).setOrigin(0.5);
-    this.trainBSprite = this.add.rectangle(0, 0, 18, 36, 0xff6a6a).setOrigin(0.5);
+    this.trainASprite = this.add.rectangle(0, 0, 108, 18, 0x4aa3ff).setOrigin(0.5);
+    this.trainBSprite = this.add.rectangle(0, 0, 18, 108, 0xff6a6a).setOrigin(0.5);
 
     // ghost markers (prediction ~2 sec)
     this.ghostA = this.add.circle(0, 0, 7).setStrokeStyle(2, 0xffffff).setAlpha(0.65);

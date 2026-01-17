@@ -43,13 +43,21 @@ export class BadUIScene extends BaseGameScene {
       .setAlpha(0.25);
 
     this.add.rectangle(820, 455, 320, 260, 0x16161d, 0.55).setStrokeStyle(3, 0x3c3c48);
+    this.add
+      .text(820, 455, 'hhau2iuhak3h2uinjk\nueyu2hj1uui2bb5hhf\nyuioij13uo1oih4o5ioh\nwqoiq33839uak3h2uinjk\nueyu2hj1uui2bb5hhf\nfheuwihwoeijod4oih\njioinwiohoi12h4o21\ni3i1klkn5h3lk11lh2\nhtrgsdkn54grgdsdsfgh2', {
+        fontSize: '28px',
+        color: '#ff0000',
+        align: 'center',
+      })
+      .setOrigin(0.5)
+      .setAlpha(0.8);
 
     // NOISE log box (important info drowned)
     this.noiseBox = this.add
-      .rectangle(820, 420, 300, 170, 0x0f0f14, 0.95)
+      .rectangle(500, 350, 300, 170, 0x0f0f14, 0.5)
       .setStrokeStyle(2, 0x2c2c3a);
 
-    this.noiseText = this.add.text(675, 340, '', {
+    this.noiseText = this.add.text(425, 280, '', {
       fontSize: '11px',
       color: '#cfcfe8',
       wordWrap: { width: 285 },
@@ -95,7 +103,7 @@ export class BadUIScene extends BaseGameScene {
 
     makeButton({
       scene: this,
-      x: baseX - 90,
+      x: 90,
       y: baseY + 40,
       w: 70,
       h: 26,
@@ -106,8 +114,8 @@ export class BadUIScene extends BaseGameScene {
 
     makeButton({
       scene: this,
-      x: baseX,
-      y: baseY + 40,
+      x: 90,
+      y: 90,
       w: 70,
       h: 26,
       label: 'ECO',
@@ -118,7 +126,7 @@ export class BadUIScene extends BaseGameScene {
     makeButton({
       scene: this,
       x: baseX + 90,
-      y: baseY + 40,
+      y: 90,
       w: 70,
       h: 26,
       label: 'TURBO',
@@ -128,7 +136,7 @@ export class BadUIScene extends BaseGameScene {
 
     // slider 0..100 no units (fake slider)
     const sliderX = baseX;
-    const sliderY = baseY - 10;
+    const sliderY = baseY + 30;
 
     this.add.text(690, sliderY - 16, 'SPEED', { fontSize: '11px', color: '#d0d0e0' }).setAlpha(0.7);
 

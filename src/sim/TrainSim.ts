@@ -107,7 +107,7 @@ export class Train {
 
     if (cmd.type === 'SET_CRUISE') {
       // map 0..1 -> 60..300 px/s
-      this.cruiseSpeed = lerp(10, 60, clamp(cmd.value01, 0, 1));
+      this.cruiseSpeed = lerp(120, 50, clamp(cmd.value01, 0, 1));
       if (!this.ecoToggleStopped) this.lastCruiseSpeed = this.cruiseSpeed;
       return;
     }
@@ -273,7 +273,7 @@ export class TrainSim {
     this.trainB.update(dt, mode);
 
     // collision at intersection
-    const ra = 16;
+    const ra = 54;
     const aNear = this.trainA.distanceToIntersection() < ra;
     const bNear = this.trainB.distanceToIntersection() < ra;
 
